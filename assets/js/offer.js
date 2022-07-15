@@ -1,6 +1,5 @@
 
 window.addEventListener("DOMContentLoaded", () => {
-  console.log('loaded');
   const options = {
     rewind: true,
     arrows: true,
@@ -22,6 +21,4 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   var splide = new Splide(".splide", options).mount();
-  
-  console.log(splide);
 })

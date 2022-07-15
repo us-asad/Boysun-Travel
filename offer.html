@@ -92,11 +92,11 @@
                   <a href="/contact.html">CONTACT US</a>
                 </li>
                 <li class="divide-x-2 divide-main-black-100 items-center flex">
-                  <a
-                    href="/login"
-                    class="hover:text-main-green-100 duration-200 pr-[15px]"
-                    >SIGN IN</a
+                  <button
+                    class="hover:text-main-green-100 duration-200 pr-[15px] login-modal-opener"
                   >
+                    SIGN IN
+                  </button>
                   <div class="px-[15px] relative group">
                     <p
                       class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -124,11 +124,9 @@
             <div
               class="hidden lg:flex divide-x-2 divide-main-black-100 items-center"
             >
-              <a
-                href="/login.html"
-                class="px-[15px] hover:text-main-green-100 duration-200"
-                >SIGN IN</a
-              >
+              <button class="px-[15px] hover:text-main-green-100 duration-200 login-modal-opener">
+                SIGN IN
+              </button>
               <div class="px-[15px] relative group">
                 <p
                   class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -153,15 +151,45 @@
             </div>
           </nav>
         </div>
-        <div class="splide h-[200px] sm:h-[300px] md:h-[400px] relative overflow-hidden" id="my-splide">
-          <div class="splide__arrows splide__arrows--ltr text-white text-[20px] lg:text-[30px]">
+        <div
+          id="login-modal"
+          class="fixed z-[60] top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 bg-white shadow-1 w-max mx-auto rounded-lg px-5 sm:px-10 pt-12 pb-5 opacity-0 pointer-events-none duration-200"
+        >
+          <button
+            id="login-modal-closer"
+            class="absolute top-2 right-5 text-[20px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button
+            class="p-[2px] bg-[#4b7fe0] text-white flex items-center rounded-sm"
+          >
+            <img
+              src="/assets/images/google-logo.png"
+              alt="Login With Google"
+              class="w-8 h-8 sm:w-11 sm:h-11 rounded-sm bg-white p-1"
+            />
+            <p class="py-1 px-3 font-sans">Google orqali kirish</p>
+          </button>
+        </div>
+        <div
+          id="login-modal-overlay"
+          class="fixed top-0 z-50 left-0 w-full h-full bg-[#ffffffbc] opacity-0 pointer-events-none duration-200"
+        ></div>
+        <div
+          class="splide h-[200px] sm:h-[300px] md:h-[400px] relative overflow-hidden"
+          id="my-splide"
+        >
+          <div
+            class="splide__arrows splide__arrows--ltr text-white text-[20px] lg:text-[30px]"
+          >
             <button
               class="splide__arrow splide__arrow--prev absolute top-1/2 -translate-y-1/2 left-7 z-10"
               type="button"
               aria-label="Previous slide"
               aria-controls="splide01-track"
             >
-            <i class="fa-solid fa-arrow-left"></i>
+              <i class="fa-solid fa-arrow-left"></i>
             </button>
             <button
               class="splide__arrow splide__arrow--next absolute top-1/2 -translate-y-1/2 right-7 z-10"
@@ -169,26 +197,32 @@
               aria-label="Next slide"
               aria-controls="splide01-track"
             >
-            <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
           <div class="splide__track">
             <div class="splide__list flex">
-              <div class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]">
+              <div
+                class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]"
+              >
                 <img
                   src="/assets/images/slider/1.jpg"
                   alt="Slider Image 1"
                   class="object-cover h-full w-full"
                 />
               </div>
-              <div class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]">
+              <div
+                class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]"
+              >
                 <img
                   src="/assets/images/slider/2.png"
                   alt="Slider Image 1"
                   class="object-cover h-full w-full"
                 />
               </div>
-              <div class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]">
+              <div
+                class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]"
+              >
                 <img
                   src="/assets/images/slider/3.png"
                   alt="Slider Image 1"
@@ -196,7 +230,7 @@
                 />
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </header>
       <!-- DETAILS -->

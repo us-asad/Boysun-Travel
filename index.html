@@ -13,25 +13,10 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "main-green-100": "#345E41",
-              "main-green-200": "#1c231f",
-              "main-black-100": "#8a8a8a6b",
-              "main-gray-100": "#484848",
-              "white-100": "#e6e6e696",
-              "white-200": "#bcbcbc",
-            },
-          },
-        },
-      };
-    </script>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <title>Home - Welcome</title>
   </head>
+
   <body class="overflow-x-hidden">
     <main>
       <!-- HEADER -->
@@ -39,7 +24,7 @@
         <div class="bg-white relative font-prompt font-medium">
           <nav
             id="navbar"
-            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw]"
+            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw] uppercase"
           >
             <a href="/">
               <img
@@ -50,16 +35,16 @@
             </a>
             <ul class="hidden lg:flex space-x-[52px]">
               <li class="text-main-green-100">
-                <a href="/">HOME</a>
+                <a href="/">Bosh sahifa</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/about.html">ABOUT US</a>
+                <a href="/about.html">Biz Haqimizda</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/services.html">SERVICES</a>
+                <a href="/services.html">xizmatlar</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/contact.html">CONTACT US</a>
+                <a href="/contact.html">aloqa</a>
               </li>
             </ul>
             <div id="navbar-arrows" class="lg:hidden w-[26px] relative">
@@ -80,23 +65,23 @@
             >
               <ul class="py-[25px] px-10 space-y-[20px]">
                 <li class="text-main-green-100">
-                  <a href="/">HOME</a>
+                  <a href="/">bosh sahifa</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/about.html">ABOUT US</a>
+                  <a href="/about.html">biz Haqimizda</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/services.html">SERVICES</a>
+                  <a href="/services.html">xizmatlar</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/contact.html">CONTACT US</a>
+                  <a href="/contact.html">aloqa</a>
                 </li>
                 <li class="divide-x-2 divide-main-black-100 items-center flex">
-                  <a
-                    href="/login"
-                    class="hover:text-main-green-100 duration-200 pr-[15px]"
-                    >SIGN IN</a
+                  <button
+                    class="hover:text-main-green-100 duration-200 pr-[15px] login-modal-opener uppercase"
                   >
+                    Kirish
+                  </button>
                   <div class="px-[15px] relative group">
                     <p
                       class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -109,7 +94,7 @@
                       <li
                         class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                       >
-                        UZ
+                        O'Z
                       </li>
                       <li
                         class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -124,11 +109,12 @@
             <div
               class="hidden lg:flex divide-x-2 divide-main-black-100 items-center"
             >
-              <a
-                href="/login.html"
-                class="px-[15px] hover:text-main-green-100 duration-200"
-                >SIGN IN</a
+              <button
+                type="button"
+                class="px-[15px] hover:text-main-green-100 duration-200 login-modal-opener uppercase"
               >
+                Kirish
+              </button>
               <div class="px-[15px] relative group">
                 <p
                   class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -141,7 +127,7 @@
                   <li
                     class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                   >
-                    UZ
+                    O'Z
                   </li>
                   <li
                     class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -165,12 +151,10 @@
             <div
               class="absolute w-[80%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white"
             >
-              <h3 class="text-[40px] font-bold">Lorem Ipsum Dolor erw!</h3>
+              <h3 class="text-[40px] font-bold">Yuqori Sifat</h3>
               <p class="text-[18px] mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita velit deleniti eveniet architecto animi odio vero!
-                Quibusdam beatae officia ea sequi, nostrum doloribus dolor
-                consequuntur ex hic, laboriosam pariatur aut.
+                Bizning eng katta ustunligimiz, Sayohlarning Xizmatimizdan 100%
+                qoniqishidir.
               </p>
             </div>
           </div>
@@ -185,12 +169,9 @@
             <div
               class="absolute w-[80%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white"
             >
-              <h3 class="text-[40px] font-bold">Lorem Ipsum Dolor 2423!</h3>
+              <h3 class="text-[40px] font-bold">Biz bilan sayohat qiling</h3>
               <p class="text-[18px] mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita velit deleniti eveniet architecto animi odio vero!
-                Quibusdam beatae officia ea sequi, nostrum doloribus dolor
-                consequuntur ex hic, laboriosam pariatur aut.
+                Eng yaxshi sifat hamyonbop narx barchasi bizda.
               </p>
             </div>
           </div>
@@ -205,12 +186,12 @@
             <div
               class="absolute w-[80%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-white"
             >
-              <h3 class="text-[40px] font-bold">Lorem Ipsum Dolor 43!</h3>
+              <h3 class="text-[40px] font-bold">
+                Yangi dunyolarni kashf qiling
+              </h3>
               <p class="text-[18px] mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita velit deleniti eveniet architecto animi odio vero!
-                Quibusdam beatae officia ea sequi, nostrum doloribus dolor
-                consequuntur ex hic, laboriosam pariatur aut.
+                Biz bilan birgalikda qiziqarli joylarni kasf qiling va hech
+                qachon ko'rmagan manzaralaringizdan rohatlaning
               </p>
             </div>
           </div>
@@ -229,27 +210,50 @@
             </button>
           </div>
         </div>
+        <div
+          id="login-modal"
+          class="fixed z-[60] top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 bg-white shadow-1 w-max mx-auto rounded-lg px-5 sm:px-10 pt-12 pb-5 opacity-0 pointer-events-none duration-200"
+        >
+          <button
+            id="login-modal-closer"
+            class="absolute top-2 right-5 text-[20px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button
+            class="p-[2px] bg-[#4b7fe0] text-white flex items-center rounded-sm"
+          >
+            <img
+              src="/assets/images/google-logo.png"
+              alt="Login With Google"
+              class="w-8 h-8 sm:w-11 sm:h-11 rounded-sm bg-white p-1"
+            />
+            <p class="py-1 px-3 font-sans">Google orqali kirish</p>
+          </button>
+        </div>
+        <div
+          id="login-modal-overlay"
+          class="fixed top-0 z-50 left-0 w-full h-full bg-[#ffffffbc] opacity-0 pointer-events-none duration-200"
+        ></div>
       </header>
       <!-- ABOUT -->
       <section class="container mx-auto px-6 my-40 relative">
         <h3
           class="hidden md:block text-white-100 text-[110px] font-bold absolute left-1/2 -translate-x-1/2 -top-[100px] z-[-1]"
         >
-          About
+          Biz Haqimizda
         </h3>
         <div
           class="p-0 md:px-[100px] lg:px-[200px] xl:px-[278px] text-center space-y-[31px] font-prompt"
         >
-          <h4 class="text-[35px] md:text-[40px] font-medium leading-[53px]">
-            Welcome to Wonderer<br />
-            Camping Ground
-          </h4>
+          <div class="text-[35px] md:text-[40px] font-medium leading-[53px]">
+            <img src="/assets/images/logo.png" alt="Logo" class="mx-auto" />
+          </div>
           <p class="text-[18px] font-light leading-[31px] text-main-gray-100">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit.
+            Boysun Ko'xinur Travel eng yuqori sifatli turizm xizmatlarini taklif
+            qiluvchi jamoa. Biz sizga O'zbekistonda o'ziningiz uchun yangi
+            dunyoni kashf qilishga va bu uchun eng yuqori sifatga ega hamyonbop
+            narxalrni ham taqdim etamiz.
           </p>
         </div>
         <div
@@ -259,19 +263,19 @@
             <i
               class="fa-solid fa-expand text-[70px] text-main-green-100 duration-150 hover:-translate-y-1"
             ></i>
-            <p class="pt-3">30 CAMPER SITES</p>
+            <p class="pt-3">320 Mashinalar</p>
           </div>
           <div class="w-full md:w-1/3 lg:w-1/5 pt-10 md:p-0">
             <i
               class="fa-solid fa-expand text-[70px] text-main-green-100 duration-150 hover:-translate-y-1"
             ></i>
-            <p class="pt-3">30 CAMPER SITES</p>
+            <p class="pt-3">93 Sayohlik hududlar</p>
           </div>
           <div class="w-full md:w-1/3 lg:w-1/5 pt-10 md:p-0">
             <i
               class="fa-solid fa-expand text-[70px] text-main-green-100 duration-150 hover:-translate-y-1"
             ></i>
-            <p class="pt-3">30 CAMPER SITES</p>
+            <p class="pt-3">932 Mijozlar</p>
           </div>
           <div
             class="w-full md:w-1/2 pt-10 md:pl-[105px] md:pt-[50px] lg:p-0 lg:w-1/5"
@@ -279,7 +283,7 @@
             <i
               class="fa-solid fa-expand text-[70px] text-main-green-100 duration-150 hover:-translate-y-1"
             ></i>
-            <p class="pt-3">30 CAMPER SITES</p>
+            <p class="pt-3">329 Mehmonxonalar</p>
           </div>
           <div
             class="w-full md:w-1/2 pt-10 md:pr-[105px] md:pt-[50px] lg:p-0 lg:w-1/5"
@@ -287,7 +291,7 @@
             <i
               class="fa-solid fa-expand text-[70px] text-main-green-100 duration-150 hover:-translate-y-1"
             ></i>
-            <p class="pt-3">30 CAMPER SITES</p>
+            <p class="pt-3">32 Xizmatlar</p>
           </div>
         </div>
       </section>
@@ -300,14 +304,15 @@
             class="w-full rounded-xl"
             id="about-video"
           >
-            Sorry your browser does not support this file, Please try with
-            another browser
+            Kechirasiz sizning brauzeringiz ushbu fileni qo'llab quvvatlamaydi.
+            Iltimos boshqa brauzerdan foydalaning.
           </video>
           <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
+            id="about-video-thumbnail"
+            class="absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover rounded-xl grid place-content-center z-30 bg-[url(/assets/images/demos/1.jpg)]"
           >
             <button
-              class="text-white w-10 h-10 text-[20px] md:w-[80px] md:h-[80px] md:text-[40px] bg-[#ffffff96] grid place-content-center border-2 rounded-full outline-none group-hover:opacity-50 hover:!opacity-100 duration-200"
+              class="text-white w-10 h-10 text-[20px] md:w-[80px] md:h-[80px] md:text-[40px] bg-[#ffffff96] grid place-content-center border-2 rounded-full outline-none hover:!opacity-100 duration-200"
               id="play-about-video"
             >
               <i class="fa-solid fa-play"></i>
@@ -321,20 +326,16 @@
           <h3
             class="hidden md:block text-white-100 text-[110px] font-bold absolute left-1/2 -translate-x-1/2 -top-[100px] z-[-1]"
           >
-            Popular Places
+            Mashhur Joylar
           </h3>
           <div
             class="p-0 md:px-[100px] lg:px-[200px] xl:px-[278px] text-center space-y-[31px] font-prompt"
           >
             <h4 class="text-[35px] md:text-[40px] font-medium leading-[53px]">
-              Relax With Popular Places
+              Mashhur Joylar
             </h4>
             <p class="text-[18px] font-light leading-[31px] text-main-gray-100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit.
+              Biz bilan O'zbekistonning eng mashhur joylarini kashf eting
             </p>
           </div>
         </div>
@@ -342,12 +343,12 @@
           class="grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8"
         >
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/1.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Termiz</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -355,12 +356,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/2.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Qarshi</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -368,12 +369,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/3.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Buxoro</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -381,12 +382,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/4.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Andijon</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -399,12 +400,12 @@
           class="grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8 mt-5 !hidden"
         >
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/5.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Nukus</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -412,12 +413,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] overflow-hidden group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/6.jpg)] overflow-hidden group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Samarqand</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -425,12 +426,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/7.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Sirdaryo</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -438,12 +439,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/8.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Namangan</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -456,7 +457,7 @@
             id="load-more-popular-places"
             class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
           >
-            Load More
+            Ko'proq Yuklash
           </button>
         </div>
       </section>
@@ -466,20 +467,17 @@
           <h3
             class="hidden md:block text-white-100 text-[110px] font-bold absolute left-1/2 -translate-x-1/2 -top-[100px] z-[-1]"
           >
-            Best Hotels
+            Eng Yaxshi Mehmonxonalar
           </h3>
           <div
             class="p-0 md:px-[100px] lg:px-[200px] xl:px-[278px] text-center space-y-[31px] font-prompt"
           >
             <h4 class="text-[35px] md:text-[40px] font-medium leading-[53px]">
-              Relax With Best Hotels
+              Eng Yaxshi Mehmonxonalar
             </h4>
             <p class="text-[18px] font-light leading-[31px] text-main-gray-100">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit.
+              Biz eng yuqori sifat bilan eng sifatli mehmonxonalarni sizga
+              taklif qilamiz.
             </p>
           </div>
         </div>
@@ -487,12 +485,12 @@
           class="grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8"
         >
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/9.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Termiz</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -500,12 +498,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/10.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Qarshi</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -513,12 +511,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/11.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Namangan</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -526,12 +524,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/12.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Buxoro</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -544,12 +542,12 @@
           class="grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8 mt-5 !hidden"
         >
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/13.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Andijon</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -557,12 +555,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] overflow-hidden group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/14.jpg)] overflow-hidden group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Nukus</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -570,12 +568,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/15.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Navoiy</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -583,12 +581,12 @@
             </div>
           </div>
           <div
-            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+            class="bg-[url(/assets/images/demos/16.jpg)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
           >
             <div
               class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
             >
-              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <h5 class="font-medium text-[25px] mb-2">Xorazim</h5>
               <p class="text-[12px] leading-0 text-main-gray-200 font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
@@ -601,7 +599,7 @@
             id="load-more-best-hotels"
             class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
           >
-            Load More
+            Ko'proq Yuklash
           </button>
         </div>
       </section>
@@ -610,11 +608,11 @@
         <div
           class="px-[5%] md:px-[10%] lg:px-[20%] text-center text-main-gray-100"
         >
-          <h2 class="text-[40px] font-semibold">Campground price list</h2>
+          <h2 class="text-[40px] font-semibold">Top Xizmatlar</h2>
           <p class="mt-[25px] text-[18px] font-light leading-[31px]">
-            In an area of 3.8 hectares are available areas of 80-100 square
-            meters, of course separated by shrubs and trees that offer thick
-            shade able to accommodate caravans
+            Xizmatlarimizning narxidan qatiy nazar biz barcha ko'rsatilgan
+            xizmatlarimiz uchun yuqori sifatni kafotlatlaymiz va shuning uchun
+            boshqalardan ajralib turamiz
           </p>
         </div>
         <div class="px-6 space-y-20 xl:space-y-[120px] pt-20 pb-12">
@@ -688,12 +686,15 @@
                   </ul>
                 </div>
               </div>
-              <a
-                href="/offer.html"
-                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
-              >
-                Purchase
-              </a>
+              <div class="flex justify-between items-center mt-5">
+                <a
+                  href="/offer.html"
+                  class="block w-fit px-6 py-[13px] border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+                >
+                  Batafsil
+                </a>
+                <p class="text-[20px]">2000000.00 UZS</p>
+              </div>
             </div>
             <img
               src="/assets/images/default-prices.jpg"
@@ -771,12 +772,15 @@
                   </ul>
                 </div>
               </div>
-              <a
-                href="/offer.html"
-                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
-              >
-                Purchase
-              </a>
+              <div class="flex justify-between items-center mt-5">
+                <a
+                  href="/offer.html"
+                  class="block w-fit px-6 py-[13px] border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+                >
+                  Batafsil
+                </a>
+                <p class="text-[20px]">2000000.00 UZS</p>
+              </div>
             </div>
             <img
               src="/assets/images/default-prices.jpg"
@@ -786,10 +790,15 @@
           </div>
         </div>
         <div class="grid place-content-center">
-          <button type="button" class="group hover:text-main-green-100 text-[20px] font-semibold tracking-wider space-x-2">
-            <span>MORE</span>
-            <i class="fa-solid fa-arrow-right-long text-[20px] w-8 text-start group-hover:pl-2 duration-200"></i>
-          </button>
+          <a
+            href="/services.html"
+            class="group hover:text-main-green-100 text-[20px] font-semibold tracking-wider space-x-2"
+          >
+            <span>Ko'proq</span>
+            <i
+              class="fa-solid fa-arrow-right-long text-[20px] w-8 text-start group-hover:pl-2 duration-200"
+            ></i>
+          </a>
         </div>
       </section>
       <!-- FOOTER -->
@@ -798,54 +807,58 @@
           <div class="pt-[103px] pb-[84px] flex flex-wrap">
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                This is Kamperen
+                <span class="text-center">Boysun Ko'xinur<br/> Travel</span>
               </h5>
               <p class="my-1 font-light leading-[25.95px]">
-                Kamperen is equipped with everythig required for an amazing
-                campground business website. Set up camp now.
+                Boysun Ko'xinur Travel O'zbekiston bo'yicha eng sifatli sayohlik agentligi.
               </p>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Links
+                Havolalar
               </h5>
               <ul class="space-y-[10px]">
                 <li>
                   <a href="/about.html" class="hover:text-white duration-200"
-                    >About Us</a
+                    >Bosh Sahifa</a
+                  >
+                </li>
+                <li>
+                  <a href="/about.html" class="hover:text-white duration-200"
+                    >Biz Haqimizda</a
                   >
                 </li>
                 <li>
                   <a href="/services.html" class="hover:text-white duration-200"
-                    >Services</a
+                    >Xizmatlar</a
                   >
                 </li>
                 <li>
                   <a href="/contact.html" class="hover:text-white duration-200"
-                    >Contact Us</a
+                    >Aloqa</a
                   >
                 </li>
               </ul>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Contact
+                Aloqa
               </h5>
               <ul class="space-y-2">
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Manzil:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     Via Venti Settembre, Ireland
                   </a>
                 </li>
                 <li>
-                  <span>P:</span>&nbsp;
+                  <span>Telefon:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     +31 555 777 83
                   </a>
                 </li>
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Elektron Pochta:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     kamperen@qode.com
                   </a>
@@ -854,7 +867,7 @@
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Get Social
+                Ijtimoiy Tarmoqlar
               </h5>
               <ul class="space-y-3">
                 <li>
@@ -891,15 +904,16 @@
             class="flex flex-col space-y-4 text-center py-5 md:flex-row md:space-y-0 justify-between border-t border-gray-600"
           >
             <div class="divide-x-2 divide-gray-600">
-              <a href="/" class="pr-2">Terms of Use</a>
-              <a href="/" class="pl-3">Privacy Policy</a>
+              <a href="/" class="pr-2">Foydalanish shartlari</a>
+              <a href="/" class="pl-3">Maxfiylik siyosati</a>
             </div>
-            <p>© 2021 Qode Interactive, All Rights Reserved</p>
+            <p>© 2020 Boysun Ko'xinur Travel, Barcha huquqlar himoyalangan</p>
           </div>
         </div>
       </footer>
     </main>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/video.js"></script>
     <script src="/assets/js/home.js"></script>
   </body>
 </html>

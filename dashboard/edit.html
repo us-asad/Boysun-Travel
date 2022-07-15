@@ -40,7 +40,7 @@
         <div class="bg-white relative font-prompt font-medium">
           <nav
             id="navbar"
-            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw]"
+            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw] uppercase"
           >
             <a href="/">
               <img
@@ -51,16 +51,16 @@
             </a>
             <ul class="hidden lg:flex space-x-[52px]">
               <li class="hover:text-main-green-100">
-                <a href="/">HOME</a>
+                <a href="/">Bosh sahifa</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/about.html">ABOUT US</a>
+                <a href="/about.html">Biz Haqimizda</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/services.html">SERVICES</a>
+                <a href="/services.html">xizmatlar</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/contact.html">CONTACT US</a>
+                <a href="/contact.html">aloqa</a>
               </li>
             </ul>
             <div id="navbar-arrows" class="lg:hidden w-[26px] relative">
@@ -81,23 +81,23 @@
             >
               <ul class="py-[25px] px-10 space-y-[20px]">
                 <li class="hover:text-main-green-100">
-                  <a href="/">HOME</a>
+                  <a href="/">Bosh sahifa</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/about.html">ABOUT US</a>
+                  <a href="/about.html">Biz haqimizda</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/services.html">SERVICES</a>
+                  <a href="/services.html">xizmatlar</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/contact.html">CONTACT US</a>
+                  <a href="/contact.html">aloqa</a>
                 </li>
                 <li class="divide-x-2 divide-main-black-100 items-center flex">
-                  <a
-                    href="/login"
-                    class="hover:text-main-green-100 duration-200 pr-[15px]"
-                    >SIGN IN</a
+                  <button
+                    class="hover:text-main-green-100 duration-200 pr-[15px] login-modal-opener"
                   >
+                    KIRISH
+                  </button>
                   <div class="px-[15px] relative group">
                     <p
                       class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -110,7 +110,7 @@
                       <li
                         class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                       >
-                        UZ
+                        O'Z
                       </li>
                       <li
                         class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -125,11 +125,11 @@
             <div
               class="hidden lg:flex divide-x-2 divide-main-black-100 items-center"
             >
-              <a
-                href="/login.html"
-                class="px-[15px] hover:text-main-green-100 duration-200"
-                >SIGN IN</a
+              <button
+                class="px-[15px] hover:text-main-green-100 duration-200 login-modal-opener"
               >
+                KIRISH
+              </button>
               <div class="px-[15px] relative group">
                 <p
                   class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -142,7 +142,7 @@
                   <li
                     class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                   >
-                    UZ
+                    O'Z
                   </li>
                   <li
                     class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -155,102 +155,154 @@
           </nav>
         </div>
         <div
+          id="login-modal"
+          class="fixed z-[60] top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 bg-white shadow-1 w-max mx-auto rounded-lg px-5 sm:px-10 pt-12 pb-5 opacity-0 pointer-events-none duration-200"
+        >
+          <button
+            id="login-modal-closer"
+            class="absolute top-2 right-5 text-[20px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button
+            class="p-[2px] bg-[#4b7fe0] text-white flex items-center rounded-sm"
+          >
+            <img
+              src="/assets/images/google-logo.png"
+              alt="Login With Google"
+              class="w-8 h-8 sm:w-11 sm:h-11 rounded-sm bg-white p-1"
+            />
+            <p class="py-1 px-3 font-sans">Google orqali kirish</p>
+          </button>
+        </div>
+        <div
+          id="login-modal-overlay"
+          class="fixed top-0 z-50 left-0 w-full h-full bg-[#ffffffbc] opacity-0 pointer-events-none duration-200"
+        ></div>
+        <div
           class="h-[250px] flex items-center justify-center md:justify-between flex-col space-y-6 md:space-y-0 md:flex-row bg-gray-100 text-black"
         >
           <h1
             class="px-12 font-prompt text-[35px] sm:text-[50px] font-semibold leading-[67px]"
           >
-            Contact Us
+            Profilni tahrirlash
           </h1>
           <ul
             class="flex px-12 text-[13px] md:text-[15px] font-light space-x-3"
           >
             <li>
-              <a href="/"> Home </a>
+              <a href="/">Bosh sahifa</a>
             </li>
             <li>></li>
-            <li class="w-max">User Dashboard</li>
+            <li class="w-max">Profilni tahrirlash</li>
           </ul>
         </div>
       </header>
       <!-- MAIN -->
-      <section class="py-10 container mx-auto px-6 md:px-10 lg:px-20 flex flex-col-reverse md:flex-row md:space-x-10 text-main-gray-100">
+      <section
+        class="py-10 container mx-auto px-6 md:px-10 lg:px-20 flex flex-col-reverse md:flex-row md:space-x-10 text-main-gray-100"
+      >
         <ul
-          class="w-full md:min-w-[315px] md:max-w-[315px] h-fit mt-8 md:mt-0 space-y-4 bg-gray-100 py-[21px] px-6 text-[13px] font-semibold uppercase tracking-wider text-main-gray-100"
+          class="w-full md:w-[315px] h-fit mt-8 md:mt-0 space-y-4 bg-gray-100 py-[21px] px-6 text-[13px] font-semibold uppercase tracking-wider text-main-gray-100"
         >
           <li>
             <a href="/dashboard" class="text-main-green-100">
               <i class="fa-solid fa-user text-[14px] mr-2"></i>
-              <span>Profile</span>
+              <span>Profil</span>
             </a>
           </li>
           <li>
-            <a href="/dashboard/edit.html" class="hover:text-main-green-100 duration-200">
+            <a
+              href="/dashboard/edit.html"
+              class="hover:text-main-green-100 duration-200"
+            >
               <i class="fa-solid fa-user text-[14px] mr-2"></i>
-              <span>Edit Profile</span>
+              <span>Profilni Tahrirlash</span>
             </a>
           </li>
           <li>
-            <a href="/dashboard/reserved.html" class="hover:text-main-green-100 duration-200">
+            <a
+              href="/dashboard/reserved.html"
+              class="hover:text-main-green-100 duration-200"
+            >
               <i class="fa-solid fa-user text-[14px] mr-2"></i>
-              <span>RESERVED ACCOMMODATIONS</span>
+              <span>Ko'rsatilgan Xizmatlar</span>
             </a>
           </li>
           <li>
             <a href="#" class="hover:text-main-green-100 duration-200">
               <i class="fa-solid fa-user text-[14px] mr-2"></i>
-              <span>LOG OUT</span>
+              <span>Chiqish</span>
             </a>
           </li>
         </ul>
         <form class="w-full">
+          <img
+            id="profile-img"
+            src="/assets/images/default-user.png"
+            alt="User Profile Image"
+            class="w-28 h-28 object-cover mb-3"
+          />
+          <label
+            for="profile-image"
+            class="mb-6 px-5 py-3 bg-blue-600 text-white rounded-lg cursor-pointer block w-fit"
+            >Rasmni O'zgartirish</label
+          >
+          <input id="profile-image" type="file" hidden />
           <label
             for="first-name"
             class="text-[20px] md:text-[30px] font-semibold text-black block mb-2"
-          >First Name</label>
+            >Ism</label
+          >
           <input
-          id="first-name"
+            id="first-name"
             type="text"
             class="block w-full mb-6 text-[15px] font-light text-main-gray-100 outline-none border border-gray-600 focus:border-black px-5 py-[11px]"
           />
           <label
-            for="first-name"
+            for="last-name"
             class="text-[20px] md:text-[30px] font-semibold text-black block mb-2"
-          >Last Name</label>
+            >Familiya</label
+          >
           <input
-          id="first-name"
+            id="last-name"
             type="text"
             class="block w-full mb-6 text-[15px] font-light text-main-gray-100 outline-none border border-gray-600 focus:border-black px-5 py-[11px]"
           />
           <label
-            for="first-name"
+            for="email"
             class="text-[20px] md:text-[30px] font-semibold text-black block mb-2"
-          >Email</label>
+            >Elektron Pochta</label
+          >
           <input
-          id="first-name"
+            id="email"
             type="text"
             class="block w-full mb-6 text-[15px] font-light text-main-gray-100 outline-none border border-gray-600 focus:border-black px-5 py-[11px]"
           />
           <label
-            for="first-name"
+            for="website"
             class="text-[20px] md:text-[30px] font-semibold text-black block mb-2"
-          >Website</label>
+            >Vabsayt</label
+          >
           <input
-          id="first-name"
+            id="website"
             type="text"
             class="block w-full mb-6 text-[15px] font-light text-main-gray-100 outline-none border border-gray-600 focus:border-black px-5 py-[11px]"
           />
           <label
-            for="first-name"
+            for="description"
             class="text-[20px] md:text-[30px] font-semibold text-black block mb-2"
-          >Description</label>
+            >Izoh</label
+          >
           <input
-          id="first-name"
+            id="description"
             type="text"
             class="block w-full mb-6 text-[15px] font-light text-main-gray-100 outline-none border border-gray-600 focus:border-black px-5 py-[11px]"
           />
-          <button class="mt-5 px-[34px] py-[15px] text-[13px] font-semibold text-white bg-main-green-100 hover:bg-main-green-300 duration-200 uppercase">
-            Update Profile
+          <button
+            class="mt-5 px-[34px] py-[15px] text-[13px] font-semibold text-white bg-main-green-100 hover:bg-main-green-300 duration-200 uppercase"
+          >
+            Profilni Yangilash
           </button>
         </form>
       </section>
@@ -260,52 +312,62 @@
           <div class="pt-[103px] pb-[84px] flex flex-wrap">
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                This is Kamperen
+                <span class="text-center"
+                  >Boysun Ko'xinur<br />
+                  Travel</span
+                >
               </h5>
               <p class="my-1 font-light leading-[25.95px]">
-                Kamperen is equipped with everythig required for an amazing
-                campground business website. Set up camp now.
+                Boysun Ko'xinur Travel O'zbekiston bo'yicha eng sifatli sayohlik
+                agentligi.
               </p>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Links
+                Havolalar
               </h5>
               <ul class="space-y-[10px]">
                 <li>
-                  <a href="/" class="hover:text-white duration-200">Home</a>
+                  <a href="/about.html" class="hover:text-white duration-200"
+                    >Bosh Sahifa</a
+                  >
                 </li>
                 <li>
                   <a href="/about.html" class="hover:text-white duration-200"
-                    >About Us</a
+                    >Biz Haqimizda</a
+                  >
+                </li>
+                <li>
+                  <a href="/services.html" class="hover:text-white duration-200"
+                    >Xizmatlar</a
                   >
                 </li>
                 <li>
                   <a href="/contact.html" class="hover:text-white duration-200"
-                    >Contact Us</a
+                    >Aloqa</a
                   >
                 </li>
               </ul>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Contact
+                Aloqa
               </h5>
               <ul class="space-y-2">
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Manzil:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     Via Venti Settembre, Ireland
                   </a>
                 </li>
                 <li>
-                  <span>P:</span>&nbsp;
+                  <span>Telefon:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     +31 555 777 83
                   </a>
                 </li>
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Elektron Pochta:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     kamperen@qode.com
                   </a>
@@ -314,7 +376,7 @@
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Get Social
+                Ijtimoiy Tarmoqlar
               </h5>
               <ul class="space-y-3">
                 <li>
@@ -351,14 +413,15 @@
             class="flex flex-col space-y-4 text-center py-5 md:flex-row md:space-y-0 justify-between border-t border-gray-600"
           >
             <div class="divide-x-2 divide-gray-600">
-              <a href="/" class="pr-2">Terms of Use</a>
-              <a href="/" class="pl-3">Privacy Policy</a>
+              <a href="/" class="pr-2">Foydalanish shartlari</a>
+              <a href="/" class="pl-3">Maxfiylik siyosati</a>
             </div>
-            <p>© 2021 Qode Interactive, All Rights Reserved</p>
+            <p>© 2020 Boysun Ko'xinur Travel, Barcha huquqlar himoyalangan</p>
           </div>
         </div>
       </footer>
     </main>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/dashboard.js"></script>
   </body>
 </html>

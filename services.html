@@ -39,7 +39,7 @@
         <div class="bg-white relative font-prompt font-medium">
           <nav
             id="navbar"
-            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw]"
+            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw] uppercase"
           >
             <a href="/">
               <img
@@ -50,16 +50,16 @@
             </a>
             <ul class="hidden lg:flex space-x-[52px]">
               <li class="hover:text-main-green-100">
-                <a href="/">HOME</a>
+                <a href="/">Bosh Sahifa</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/about.html">ABOUT US</a>
+                <a href="/about.html">Biz Haqimizda</a>
               </li>
               <li class="text-main-green-100 duration-200">
-                <a href="/services.html">SERVICES</a>
+                <a href="/services.html">Xizmatlar</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/contact.html">CONTACT US</a>
+                <a href="/contact.html">Aloqa</a>
               </li>
             </ul>
             <div id="navbar-arrows" class="lg:hidden w-[26px] relative">
@@ -80,23 +80,23 @@
             >
               <ul class="py-[25px] px-10 space-y-[20px]">
                 <li class="hover:text-main-green-100">
-                  <a href="/">HOME</a>
+                  <a href="/">Bosh Sahifa</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/about.html">ABOUT US</a>
+                  <a href="/about.html">Biz Haqimizda</a>
                 </li>
                 <li class="text-main-green-100">
-                  <a href="/services.html">SERVICES</a>
+                  <a href="/services.html">Xizmatlar</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/contact.html">CONTACT US</a>
+                  <a href="/contact.html">Aloqa</a>
                 </li>
                 <li class="divide-x-2 divide-main-black-100 items-center flex">
-                  <a
-                    href="/login"
-                    class="hover:text-main-green-100 duration-200 pr-[15px]"
-                    >SIGN IN</a
+                  <button
+                    class="hover:text-main-green-100 duration-200 pr-[15px] login-modal-opener"
                   >
+                    KIRISH
+                  </button>
                   <div class="px-[15px] relative group">
                     <p
                       class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -109,7 +109,7 @@
                       <li
                         class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                       >
-                        UZ
+                        O'Z
                       </li>
                       <li
                         class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -124,11 +124,11 @@
             <div
               class="hidden lg:flex divide-x-2 divide-main-black-100 items-center"
             >
-              <a
-                href="/login.html"
-                class="px-[15px] hover:text-main-green-100 duration-200"
-                >SIGN IN</a
+              <button
+                class="px-[15px] hover:text-main-green-100 duration-200 login-modal-opener"
               >
+                KIRISH
+              </button>
               <div class="px-[15px] relative group">
                 <p
                   class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -141,7 +141,7 @@
                   <li
                     class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                   >
-                    UZ
+                    O'Z
                   </li>
                   <li
                     class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -154,10 +154,35 @@
           </nav>
         </div>
         <div
+          id="login-modal"
+          class="fixed z-[60] top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 bg-white shadow-1 w-max mx-auto rounded-lg px-5 sm:px-10 pt-12 pb-5 opacity-0 pointer-events-none duration-200"
+        >
+          <button
+            id="login-modal-closer"
+            class="absolute top-2 right-5 text-[20px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button
+            class="p-[2px] bg-[#4b7fe0] text-white flex items-center rounded-sm"
+          >
+            <img
+              src="/assets/images/google-logo.png"
+              alt="Login With Google"
+              class="w-8 h-8 sm:w-11 sm:h-11 rounded-sm bg-white p-1"
+            />
+            <p class="py-1 px-3 font-sans">Google orqali kirish</p>
+          </button>
+        </div>
+        <div
+          id="login-modal-overlay"
+          class="fixed top-0 z-50 left-0 w-full h-full bg-[#ffffffbc] opacity-0 pointer-events-none duration-200"
+        ></div>
+        <div
           class="h-[400px] grid place-content-center text-white bg-cover bg-[url(/assets/images/slider/2.png)]"
         >
           <h1 class="font-prompt text-[50px] font-semibold leading-[67px]">
-            Prices and Offers
+            Bizning Xizmatlar
           </h1>
         </div>
       </header>
@@ -166,11 +191,11 @@
         <div
           class="py-[90px] px-[5%] md:px-[10%] lg:px-[20%] text-center text-main-gray-100"
         >
-          <h2 class="text-[40px] font-semibold">Campground price list</h2>
+          <h2 class="text-[40px] font-semibold">Top Xizmatlar</h2>
           <p class="mt-[25px] text-[18px] font-light leading-[31px]">
-            In an area of 3.8 hectares are available areas of 80-100 square
-            meters, of course separated by shrubs and trees that offer thick
-            shade able to accommodate caravans
+            Xizmatlarimizning narxidan qatiy nazar biz barcha ko'rsatilgan
+            xizmatlarimiz uchun yuqori sifatni kafotlatlaymiz va shuning uchun
+            boshqalardan ajralib turamiz
           </p>
         </div>
         <div class="px-6 space-y-20 xl:space-y-[120px] py-20">
@@ -244,12 +269,15 @@
                   </ul>
                 </div>
               </div>
-              <a
-                href="/offer.html"
-                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
-              >
-                Purchase
-              </a>
+              <div class="flex justify-between items-center mt-5">
+                <a
+                  href="/offer.html"
+                  class="block w-fit px-6 py-[13px] border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+                >
+                  Batafsil
+                </a>
+                <p class="text-[20px]">2000000.00 UZS</p>
+              </div>
             </div>
             <img
               src="/assets/images/default-prices.jpg"
@@ -327,12 +355,15 @@
                   </ul>
                 </div>
               </div>
-              <a
-                href="/offer.html"
-                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
-              >
-                Purchase
-              </a>
+              <div class="flex justify-between items-center mt-5">
+                <a
+                  href="/offer.html"
+                  class="block w-fit px-6 py-[13px] border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+                >
+                  Batafsil
+                </a>
+                <p class="text-[20px]">2000000.00 UZS</p>
+              </div>
             </div>
             <img
               src="/assets/images/default-prices.jpg"
@@ -348,52 +379,58 @@
           <div class="pt-[103px] pb-[84px] flex flex-wrap">
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                This is Kamperen
+                <span class="text-center">Boysun Ko'xinur<br/> Travel</span>
               </h5>
               <p class="my-1 font-light leading-[25.95px]">
-                Kamperen is equipped with everythig required for an amazing
-                campground business website. Set up camp now.
+                Boysun Ko'xinur Travel O'zbekiston bo'yicha eng sifatli sayohlik agentligi.
               </p>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Links
+                Havolalar
               </h5>
               <ul class="space-y-[10px]">
                 <li>
-                  <a href="/" class="hover:text-white duration-200">Home</a>
+                  <a href="/about.html" class="hover:text-white duration-200"
+                    >Bosh Sahifa</a
+                  >
                 </li>
                 <li>
                   <a href="/about.html" class="hover:text-white duration-200"
-                    >About Us</a
+                    >Biz Haqimizda</a
+                  >
+                </li>
+                <li>
+                  <a href="/services.html" class="hover:text-white duration-200"
+                    >Xizmatlar</a
                   >
                 </li>
                 <li>
                   <a href="/contact.html" class="hover:text-white duration-200"
-                    >Contact Us</a
+                    >Aloqa</a
                   >
                 </li>
               </ul>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Contact
+                Aloqa
               </h5>
               <ul class="space-y-2">
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Manzil:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     Via Venti Settembre, Ireland
                   </a>
                 </li>
                 <li>
-                  <span>P:</span>&nbsp;
+                  <span>Telefon:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     +31 555 777 83
                   </a>
                 </li>
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Elektron Pochta:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     kamperen@qode.com
                   </a>
@@ -402,7 +439,7 @@
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Get Social
+                Ijtimoiy Tarmoqlar
               </h5>
               <ul class="space-y-3">
                 <li>
@@ -439,10 +476,10 @@
             class="flex flex-col space-y-4 text-center py-5 md:flex-row md:space-y-0 justify-between border-t border-gray-600"
           >
             <div class="divide-x-2 divide-gray-600">
-              <a href="/" class="pr-2">Terms of Use</a>
-              <a href="/" class="pl-3">Privacy Policy</a>
+              <a href="/" class="pr-2">Foydalanish shartlari</a>
+              <a href="/" class="pl-3">Maxfiylik siyosati</a>
             </div>
-            <p>© 2021 Qode Interactive, All Rights Reserved</p>
+            <p>© 2020 Boysun Ko'xinur Travel, Barcha huquqlar himoyalangan</p>
           </div>
         </div>
       </footer>

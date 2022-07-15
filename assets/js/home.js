@@ -30,23 +30,6 @@ const handleMainSlider = () => {
   }, 10000);
 }
 
-const handleAboutVideoPlay = () => {
-  const playBtn = $("#play-about-video");
-  const video = $("#about-video");
-
-  playBtn.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      playBtn.innerHTML = "<i class='fa-solid fa-pause'></i>";
-      playBtn.classList.add("opacity-0");
-    } else {
-      video.pause();
-      playBtn.innerHTML = "<i class='fa-solid fa-play'></i>";
-      playBtn.classList.remove("opacity-0")
-    }
-  })
-}
-
 const handleLoadMore = (btn, moreData) => {
   btn.addEventListener("click", () => {
     if (moreData.classList.contains("!hidden")) {

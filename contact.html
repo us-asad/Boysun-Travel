@@ -39,7 +39,7 @@
         <div class="bg-white relative font-prompt font-medium">
           <nav
             id="navbar"
-            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw]"
+            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw] uppercase"
           >
             <a href="/">
               <img
@@ -50,16 +50,16 @@
             </a>
             <ul class="hidden lg:flex space-x-[52px]">
               <li class="hover:text-main-green-100">
-                <a href="/">HOME</a>
+                <a href="/">Bosh sahifa</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/about.html">ABOUT US</a>
+                <a href="/about.html">Biz Haqimizda</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
-                <a href="/services.html">SERVICES</a>
+                <a href="/services.html">Xizmatlar</a>
               </li>
               <li class="text-main-green-100 duration-200">
-                <a href="/contact.html">CONTACT US</a>
+                <a href="/contact.html">Aloqa</a>
               </li>
             </ul>
             <div id="navbar-arrows" class="lg:hidden w-[26px] relative">
@@ -80,23 +80,23 @@
             >
               <ul class="py-[25px] px-10 space-y-[20px]">
                 <li class="hover:text-main-green-100">
-                  <a href="/">HOME</a>
+                  <a href="/">Bosh Sahifa</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/about.html">ABOUT US</a>
+                  <a href="/about.html">Biz Haqimizda</a>
                 </li>
                 <li class="hover:text-main-green-100">
-                  <a href="/services.html">SERVICES</a>
+                  <a href="/services.html">Xizmatlar</a>
                 </li>
                 <li class="text-main-green-100">
-                  <a href="/contact.html">CONTACT US</a>
+                  <a href="/contact.html">Aloqa</a>
                 </li>
                 <li class="divide-x-2 divide-main-black-100 items-center flex">
-                  <a
-                    href="/login"
-                    class="hover:text-main-green-100 duration-200 pr-[15px]"
-                    >SIGN IN</a
+                  <button
+                    class="hover:text-main-green-100 duration-200 pr-[15px] login-modal-opener"
                   >
+                    KIRISH
+                  </button>
                   <div class="px-[15px] relative group">
                     <p
                       class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -109,7 +109,7 @@
                       <li
                         class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                       >
-                        UZ
+                        O'Z
                       </li>
                       <li
                         class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -124,11 +124,11 @@
             <div
               class="hidden lg:flex divide-x-2 divide-main-black-100 items-center"
             >
-              <a
-                href="/login.html"
-                class="px-[15px] hover:text-main-green-100 duration-200"
-                >SIGN IN</a
+              <button
+                class="px-[15px] hover:text-main-green-100 duration-200 login-modal-opener"
               >
+                KIRISH
+              </button>
               <div class="px-[15px] relative group">
                 <p
                   class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
@@ -141,7 +141,7 @@
                   <li
                     class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
                   >
-                    UZ
+                    O'Z
                   </li>
                   <li
                     class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
@@ -154,30 +154,52 @@
           </nav>
         </div>
         <div
+          id="login-modal"
+          class="fixed z-[60] top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 bg-white shadow-1 w-max mx-auto rounded-lg px-5 sm:px-10 pt-12 pb-5 opacity-0 pointer-events-none duration-200"
+        >
+          <button
+            id="login-modal-closer"
+            class="absolute top-2 right-5 text-[20px]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button
+            class="p-[2px] bg-[#4b7fe0] text-white flex items-center rounded-sm"
+          >
+            <img
+              src="/assets/images/google-logo.png"
+              alt="Login With Google"
+              class="w-8 h-8 sm:w-11 sm:h-11 rounded-sm bg-white p-1"
+            />
+            <p class="py-1 px-3 font-sans">Google orqali kirish</p>
+          </button>
+        </div>
+        <div
+          id="login-modal-overlay"
+          class="fixed top-0 z-50 left-0 w-full h-full bg-[#ffffffbc] opacity-0 pointer-events-none duration-200"
+        ></div>
+        <div
           class="h-[400px] flex items-center text-white bg-cover bg-[url(/assets/images/slider/2.png)]"
         >
           <h1
             class="container mx-auto px-12 font-prompt text-[50px] font-semibold leading-[67px]"
           >
-            Contact Us
+            Biz bilan Aloqa
           </h1>
         </div>
       </header>
       <!-- DETAILS -->
       <section
-        class="pt-[112px] pb-[88px] container mx-auto px-6 flex flex-col lg:flex-row lg:space-x-[80px] space-y-10 space-x-0"
+        class="pt-[112px] pb-[88px] container mx-auto px-6 flex flex-col lg:flex-row lg:space-x-[80px] space-y-10 lg:space-y-0 space-x-0"
       >
         <div class="w-full lg:w-1/2">
           <h2 class="pb-[18px] text-[25px] font-semibold leading-[38px]">
-            Feel free to write on info@camp.com
+            Info@camp.com elektron pochtasiga xabar yuboring
           </h2>
           <p
             class="text-main-gray-100 text-[15px] leading-[25.95px] font-light mb-8"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna our aliqua. Ut
-            enim ad minim veniam Our Service Centre is open Monday to Friday
-            between the hours of 08:00 - 18:00
+            Savolingiz bormi? hoziroq aloqaga chiqing?
           </p>
           <ul class="font-light text-[18px] space-y-1">
             <li>Reception phone: +64 (0)50 745 6473</li>
@@ -185,7 +207,7 @@
             <li>Lodge: +64 (0)50 745 6473</li>
             <li class="!mt-5">Email: info@camp.com</li>
             <li class="!mt-3 flex space-x-5">
-              <span>Follow on:</span>
+              <span>Ijtimoiy tarmoqlar:</span>
               <div class="space-x-4">
                 <i
                   class="fa-brands fa-facebook-f hover:text-main-green-100 duration-200 cursor-pointer"
@@ -202,36 +224,39 @@
         </div>
         <div class="w-full lg:w-1/2">
           <h2 class="pb-[18px] text-[25px] font-semibold leading-[38px]">
-            How can we help?
+            Xabar Yuboring
           </h2>
           <p
             class="text-main-gray-100 text-[15px] leading-[25.95px] font-light mb-5"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna our aliqua. Ut
-            enim ad minim veniam
+            Aloqaga chiqishda qandaydir muammo bormi? Unaqada to'g'ridan to'g'ri xabar qoldiring
           </p>
           <form>
             <textarea
-              placeholder="Message *"
+              placeholder="Xabar *"
               class="text-[15px] font-light text-main-gray-100 outline-none w-full h-[180px] border border-gray-600 focus:border-black px-5 py-[11px] mb-[20px]"
             ></textarea>
             <div class="flex flex-col sm:flex-row sm:space-x-4 sm:space-y-0">
               <input
                 type="text"
-                placeholder="Name *"
+                placeholder="Ismingiz *"
                 class="text-[15px] font-light text-main-gray-100 outline-none w-full sm:w-1/2 border border-gray-600 focus:border-black px-5 py-[11px] !mb-[26px]"
               />
               <input
                 type="email"
-                placeholder="Email *"
+                placeholder="Elektron pochtangiz *"
                 class="text-[15px] font-light text-main-gray-100 outline-none w-full sm:w-1/2 border border-gray-600 focus:border-black px-5 py-[11px] !mb-[26px]"
               />
             </div>
             <div class="flex justify-end items-center">
-              <button type="button" class="group hover:text-main-green-100 text-[13px] font-semibold tracking-wider space-x-2">
-                <span>SEND</span>
-                <i class="fa-solid fa-arrow-right-long text-[15px] w-8 text-start group-hover:pl-2 duration-200"></i>
+              <button
+                type="button"
+                class="group hover:text-main-green-100 text-[13px] font-semibold tracking-wider space-x-2 uppercase"
+              >
+                <span>YUBORISH</span>
+                <i
+                  class="fa-solid fa-arrow-right-long text-[15px] w-8 text-start group-hover:pl-2 duration-200"
+                ></i>
               </button>
             </div>
           </form>
@@ -254,52 +279,58 @@
           <div class="pt-[103px] pb-[84px] flex flex-wrap">
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                This is Kamperen
+                <span class="text-center">Boysun Ko'xinur<br/> Travel</span>
               </h5>
               <p class="my-1 font-light leading-[25.95px]">
-                Kamperen is equipped with everythig required for an amazing
-                campground business website. Set up camp now.
+                Boysun Ko'xinur Travel O'zbekiston bo'yicha eng sifatli sayohlik agentligi.
               </p>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Links
+                Havolalar
               </h5>
               <ul class="space-y-[10px]">
                 <li>
-                  <a href="/" class="hover:text-white duration-200">Home</a>
+                  <a href="/about.html" class="hover:text-white duration-200"
+                    >Bosh Sahifa</a
+                  >
                 </li>
                 <li>
                   <a href="/about.html" class="hover:text-white duration-200"
-                    >About Us</a
+                    >Biz Haqimizda</a
+                  >
+                </li>
+                <li>
+                  <a href="/services.html" class="hover:text-white duration-200"
+                    >Xizmatlar</a
                   >
                 </li>
                 <li>
                   <a href="/contact.html" class="hover:text-white duration-200"
-                    >Contact Us</a
+                    >Aloqa</a
                   >
                 </li>
               </ul>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Contact
+                Aloqa
               </h5>
               <ul class="space-y-2">
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Manzil:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     Via Venti Settembre, Ireland
                   </a>
                 </li>
                 <li>
-                  <span>P:</span>&nbsp;
+                  <span>Telefon:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     +31 555 777 83
                   </a>
                 </li>
                 <li>
-                  <span>A:</span>&nbsp;
+                  <span>Elektron Pochta:</span>&nbsp;
                   <a href="/" class="hover:text-white duration-200">
                     kamperen@qode.com
                   </a>
@@ -308,7 +339,7 @@
             </div>
             <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
               <h5 class="mb-[15px] text-[20px] font-semibold text-white">
-                Get Social
+                Ijtimoiy Tarmoqlar
               </h5>
               <ul class="space-y-3">
                 <li>
@@ -345,10 +376,10 @@
             class="flex flex-col space-y-4 text-center py-5 md:flex-row md:space-y-0 justify-between border-t border-gray-600"
           >
             <div class="divide-x-2 divide-gray-600">
-              <a href="/" class="pr-2">Terms of Use</a>
-              <a href="/" class="pl-3">Privacy Policy</a>
+              <a href="/" class="pr-2">Foydalanish shartlari</a>
+              <a href="/" class="pl-3">Maxfiylik siyosati</a>
             </div>
-            <p>© 2021 Qode Interactive, All Rights Reserved</p>
+            <p>© 2020 Boysun Ko'xinur Travel, Barcha huquqlar himoyalangan</p>
           </div>
         </div>
       </footer>

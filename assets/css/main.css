@@ -44,7 +44,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 40;
   background: #fff;
 }
 
@@ -52,6 +52,10 @@
   background-size: 180%;
   background-position: center;
   transition: all 1s;
+}
+
+.group:hover .group-hover\:opacity-50 {
+  opacity: .5 !important;
 }
 
 .bg-hover-scale:hover {
