@@ -49,7 +49,7 @@
               />
             </a>
             <ul class="hidden lg:flex space-x-[52px]">
-              <li class="text-main-green-100">
+              <li class="hover:text-main-green-100">
                 <a href="/">HOME</a>
               </li>
               <li class="hover:text-main-green-100 duration-200">
@@ -75,11 +75,11 @@
             </div>
             <div
               id="mobile-navbar"
-              class="absolute top-full left-0 w-full bg-white max-h-0 overflow-hidden"
+              class="absolute top-full left-0 w-full z-10 bg-white max-h-0 overflow-hidden"
               style="transition: all 600ms"
             >
               <ul class="py-[25px] px-10 space-y-[20px]">
-                <li class="text-main-green-100">
+                <li class="hover:text-main-green-100">
                   <a href="/">HOME</a>
                 </li>
                 <li class="hover:text-main-green-100">
@@ -153,22 +153,50 @@
             </div>
           </nav>
         </div>
-        <div class="flex overflow-auto snap-x">
-          <img
-            src="/assets/images/slider/1.jpg"
-            alt="Image 1"
-            class="w-full h-[400px] object-cover snap-start"
-          />
-          <img
-            src="/assets/images/slider/2.png"
-            alt="Image 1"
-            class="w-full h-[400px] object-cover snap-start"
-          />
-          <img
-            src="/assets/images/slider/3.png"
-            alt="Image 1"
-            class="w-full h-[400px] object-cover snap-start"
-          />
+        <div class="splide h-[200px] sm:h-[300px] md:h-[400px] relative overflow-hidden" id="my-splide">
+          <div class="splide__arrows splide__arrows--ltr text-white text-[20px] lg:text-[30px]">
+            <button
+              class="splide__arrow splide__arrow--prev absolute top-1/2 -translate-y-1/2 left-7 z-10"
+              type="button"
+              aria-label="Previous slide"
+              aria-controls="splide01-track"
+            >
+            <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button
+              class="splide__arrow splide__arrow--next absolute top-1/2 -translate-y-1/2 right-7 z-10"
+              type="button"
+              aria-label="Next slide"
+              aria-controls="splide01-track"
+            >
+            <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="splide__track">
+            <div class="splide__list flex">
+              <div class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]">
+                <img
+                  src="/assets/images/slider/1.jpg"
+                  alt="Slider Image 1"
+                  class="object-cover h-full w-full"
+                />
+              </div>
+              <div class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]">
+                <img
+                  src="/assets/images/slider/2.png"
+                  alt="Slider Image 1"
+                  class="object-cover h-full w-full"
+                />
+              </div>
+              <div class="splide__slide h-[200px] sm:h-[300px] md:h-[400px] min-w-full md:min-w-[50%] lg:min-w-[33.3333%]">
+                <img
+                  src="/assets/images/slider/3.png"
+                  alt="Slider Image 1"
+                  class="object-cover h-full w-full"
+                />
+              </div>
+            </div>
+        </div>
         </div>
       </header>
       <!-- DETAILS -->
@@ -252,7 +280,7 @@
               </a>
             </div>
             <img
-              src="/assets/images/default-prices.jpg"
+              src="/assets/images/slider/1.jpg"
               alt="Offer Image"
               class="w-full xl:w-[45%] object-cover"
             />
@@ -365,5 +393,7 @@
       </footer>
     </main>
     <script src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
+    <script src="/assets/js/offer.js"></script>
   </body>
 </html>

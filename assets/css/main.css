@@ -48,6 +48,16 @@
   background: #fff;
 }
 
+.bg-hover-scale {
+  background-size: 180%;
+  background-position: center;
+  transition: all 1s;
+}
+
+.bg-hover-scale:hover {
+  background-size: 230%;
+}
+
 .list li::marker {
   content: "▪ ";
 }

@@ -39,7 +39,7 @@
         <div class="bg-white relative font-prompt font-medium">
           <nav
             id="navbar"
-            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px]"
+            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw]"
           >
             <a href="/">
               <img
@@ -75,7 +75,7 @@
             </div>
             <div
               id="mobile-navbar"
-              class="absolute top-full left-0 w-full bg-white max-h-0 overflow-hidden"
+              class="absolute top-full left-0 w-full z-10 bg-white max-h-0 overflow-hidden"
               style="transition: all 600ms"
             >
               <ul class="py-[25px] px-10 space-y-[20px]">
@@ -292,7 +292,7 @@
         </div>
       </section>
       <!-- VIDEO -->
-      <section class="container mx-auto px-6 pb-40">
+      <section class="container mx-auto px-6 pb-28">
         <div class="relative group w-[80%] mx-auto">
           <video
             src="/assets/videos/about.mp4"
@@ -313,6 +313,483 @@
               <i class="fa-solid fa-play"></i>
             </button>
           </div>
+        </div>
+      </section>
+      <!-- POPULAR PLACES -->
+      <section class="container mx-auto px-10 pb-10 text-black mt-24">
+        <div class="relative pb-20">
+          <h3
+            class="hidden md:block text-white-100 text-[110px] font-bold absolute left-1/2 -translate-x-1/2 -top-[100px] z-[-1]"
+          >
+            Popular Places
+          </h3>
+          <div
+            class="p-0 md:px-[100px] lg:px-[200px] xl:px-[278px] text-center space-y-[31px] font-prompt"
+          >
+            <h4 class="text-[35px] md:text-[40px] font-medium leading-[53px]">
+              Relax With Popular Places
+            </h4>
+            <p class="text-[18px] font-light leading-[31px] text-main-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8"
+        >
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          id="more-popular-places"
+          class="grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8 mt-5 !hidden"
+        >
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] overflow-hidden group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid place-content-center mt-5">
+          <button
+            id="load-more-popular-places"
+            class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+          >
+            Load More
+          </button>
+        </div>
+      </section>
+      <!-- BEST RESTAURANTS -->
+      <section class="container mx-auto px-10 pb-10 text-black mt-24">
+        <div class="relative pb-20">
+          <h3
+            class="hidden md:block text-white-100 text-[110px] font-bold absolute left-1/2 -translate-x-1/2 -top-[100px] z-[-1]"
+          >
+            Best Hotels
+          </h3>
+          <div
+            class="p-0 md:px-[100px] lg:px-[200px] xl:px-[278px] text-center space-y-[31px] font-prompt"
+          >
+            <h4 class="text-[35px] md:text-[40px] font-medium leading-[53px]">
+              Relax With Best Hotels
+            </h4>
+            <p class="text-[18px] font-light leading-[31px] text-main-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit.
+            </p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8"
+        >
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          id="more-best-hotels"
+          class="grid-cols-1 md:gird-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-8 mt-5 !hidden"
+        >
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] overflow-hidden group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url(/assets/images/slider/2.png)] group bg-no-repeat h-[180px] sm:h-[300px] lg:h-56 rounded-lg relative bg-hover-scale"
+          >
+            <div
+              class="opacity-0 group-hover:opacity-100 duration-500 absolute top-0 left-0 w-full h-full bg-[#221f1f9b] text-white grid place-content-center text-center p-4 rounded-lg"
+            >
+              <h5 class="font-medium text-[25px] mb-2">Termez Hello</h5>
+              <p class="text-[12px] leading-0 text-main-gray-200 font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                eius ipsum rerum odit quisquam, deleniti voluptatem iste alias
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid place-content-center mt-5">
+          <button
+            id="load-more-best-hotels"
+            class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+          >
+            Load More
+          </button>
+        </div>
+      </section>
+      <!-- SERVCIES -->
+      <section class="container mx-auto font-prompt pt-10 py-20">
+        <div
+          class="px-[5%] md:px-[10%] lg:px-[20%] text-center text-main-gray-100"
+        >
+          <h2 class="text-[40px] font-semibold">Campground price list</h2>
+          <p class="mt-[25px] text-[18px] font-light leading-[31px]">
+            In an area of 3.8 hectares are available areas of 80-100 square
+            meters, of course separated by shrubs and trees that offer thick
+            shade able to accommodate caravans
+          </p>
+        </div>
+        <div class="px-6 space-y-20 xl:space-y-[120px] pt-20 pb-12">
+          <div
+            class="flex flex-col justify-between space-y-10 xl:space-y-0 xl:flex-row"
+          >
+            <div class="w-full xl:w-[50%]">
+              <p class="text-[14px] text-main-gray-100 w-[80%]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                ea modi quam porro minus? Quis illo soluta ad autem obcaecati
+                cupiditate. Corrupti eos alias iste vero quidem aspernatur
+                cumque sapiente.
+              </p>
+              <div class="flex mt-8 text-[15px] text-main-gray-100">
+                <div class="w-full">
+                  <div class="flex w-full pb-3">
+                    <h6
+                      class="w-[80%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      lorem
+                    </h6>
+                    <h6
+                      class="w-[20%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      ipsum
+                    </h6>
+                  </div>
+                  <ul>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-y py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                href="/offer.html"
+                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+              >
+                Purchase
+              </a>
+            </div>
+            <img
+              src="/assets/images/default-prices.jpg"
+              alt="Offer Image"
+              class="w-full xl:w-[45%] object-cover"
+            />
+          </div>
+          <div
+            class="flex flex-col-reverse xl:justify-between xl:flex-row-reverse"
+          >
+            <div class="w-full xl:w-[50%]">
+              <p class="text-[14px] text-main-gray-100 w-[80%]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                ea modi quam porro minus? Quis illo soluta ad autem obcaecati
+                cupiditate. Corrupti eos alias iste vero quidem aspernatur
+                cumque sapiente.
+              </p>
+              <div class="flex mt-8 xl:pr-24 text-[15px] text-main-gray-100">
+                <div class="w-full">
+                  <div class="flex w-full pb-3">
+                    <h6
+                      class="w-[80%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      lorem
+                    </h6>
+                    <h6
+                      class="w-[20%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      ipsum
+                    </h6>
+                  </div>
+                  <ul>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-y py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                href="/offer.html"
+                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+              >
+                Purchase
+              </a>
+            </div>
+            <img
+              src="/assets/images/default-prices.jpg"
+              alt="Offer Image"
+              class="w-full mb-10 xl:w-[45%] object-cover"
+            />
+          </div>
+        </div>
+        <div class="grid place-content-center">
+          <button type="button" class="group hover:text-main-green-100 text-[20px] font-semibold tracking-wider space-x-2">
+            <span>MORE</span>
+            <i class="fa-solid fa-arrow-right-long text-[20px] w-8 text-start group-hover:pl-2 duration-200"></i>
+          </button>
         </div>
       </section>
       <!-- FOOTER -->
