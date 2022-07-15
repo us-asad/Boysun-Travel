@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome!" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "main-green-100": "#345E41",
+              "main-green-200": "#1c231f",
+              "main-black-100": "#8a8a8a6b",
+              "main-gray-100": "#484848",
+              "white-100": "#e6e6e696",
+              "white-200": "#bcbcbc",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>Home - Welcome</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <main>
+      <!-- HEADER -->
+      <header>
+        <div class="bg-white relative font-prompt font-medium">
+          <nav
+            id="navbar"
+            class="container mx-auto px-6 py-6 flex justify-between items-center text-[14px] min-w-[100vw]"
+          >
+            <a href="/">
+              <img
+                src="/assets/images/logo.png"
+                alt="Boysun Ko'xinur Travel"
+                class="w-[150px] sm:w-[200px] lg:w-52"
+              />
+            </a>
+            <ul class="hidden lg:flex space-x-[52px]">
+              <li class="text-main-green-100">
+                <a href="/">HOME</a>
+              </li>
+              <li class="hover:text-main-green-100 duration-200">
+                <a href="/about.html">ABOUT US</a>
+              </li>
+              <li class="hover:text-main-green-100 duration-200">
+                <a href="/services.html">SERVICES</a>
+              </li>
+              <li class="hover:text-main-green-100 duration-200">
+                <a href="/contact.html">CONTACT US</a>
+              </li>
+            </ul>
+            <div id="navbar-arrows" class="lg:hidden w-[26px] relative">
+              <span
+                class="w-full h-px bg-black absolute top-0 duration-200"
+              ></span>
+              <span
+                class="w-full h-px bg-black absolute top-[6px] duration-200"
+              ></span>
+              <span
+                class="w-full h-px bg-black absolute top-[12px] duration-200"
+              ></span>
+            </div>
+            <div
+              id="mobile-navbar"
+              class="absolute top-full left-0 w-full bg-white max-h-0 overflow-hidden"
+              style="transition: all 600ms"
+            >
+              <ul class="py-[25px] px-10 space-y-[20px]">
+                <li class="text-main-green-100">
+                  <a href="/">HOME</a>
+                </li>
+                <li class="hover:text-main-green-100">
+                  <a href="/about.html">ABOUT US</a>
+                </li>
+                <li class="hover:text-main-green-100">
+                  <a href="/services.html">SERVICES</a>
+                </li>
+                <li class="hover:text-main-green-100">
+                  <a href="/contact.html">CONTACT US</a>
+                </li>
+                <li class="divide-x-2 divide-main-black-100 items-center flex">
+                  <a
+                    href="/login"
+                    class="hover:text-main-green-100 duration-200 pr-[15px]"
+                    >SIGN IN</a
+                  >
+                  <div class="px-[15px] relative group">
+                    <p
+                      class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
+                    >
+                      EN
+                    </p>
+                    <ul
+                      class="bg-white absolute bottom-[120%] shadow-lg left-1/2 -translate-x-1/2 opacity-0 pointer-events-none duration-300 group-hover:opacity-100 group-hover:pointer-events-auto hover:pointer-events-auto hover:opacity-100 peer-hover:opacity-100 peer-hover:pointer-events-auto z-10"
+                    >
+                      <li
+                        class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
+                      >
+                        UZ
+                      </li>
+                      <li
+                        class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
+                      >
+                        RU
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="hidden lg:flex divide-x-2 divide-main-black-100 items-center"
+            >
+              <a
+                href="/login.html"
+                class="px-[15px] hover:text-main-green-100 duration-200"
+                >SIGN IN</a
+              >
+              <div class="px-[15px] relative group">
+                <p
+                  class="cursor-pointer peer relative after:absolute after:top-3 after:left-1/2 after:-translate-x-1/2 after:w-10 after:h-5 after:bg-transparent after:z-0"
+                >
+                  EN
+                </p>
+                <ul
+                  class="bg-white absolute top-[110%] shadow-lg left-1/2 -translate-x-1/2 opacity-0 pointer-events-none duration-300 group-hover:opacity-100 group-hover:pointer-events-auto hover:pointer-events-auto hover:opacity-100 peer-hover:opacity-100 peer-hover:pointer-events-auto z-10"
+                >
+                  <li
+                    class="pt-3 pb-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
+                  >
+                    UZ
+                  </li>
+                  <li
+                    class="pb-3 pt-1.5 px-5 hover:text-main-green-100 duration-200 cursor-pointer"
+                  >
+                    RU
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div
+          class="h-[400px] grid place-content-center text-white bg-cover bg-[url(/assets/images/slider/2.png)]"
+        >
+          <h1 class="font-prompt text-[50px] font-semibold leading-[67px]">
+            Prices and Offers
+          </h1>
+        </div>
+      </header>
+      <!-- PRICES -->
+      <section class="container mx-auto font-prompt">
+        <div
+          class="py-[90px] px-[5%] md:px-[10%] lg:px-[20%] text-center text-main-gray-100"
+        >
+          <h2 class="text-[40px] font-semibold">Campground price list</h2>
+          <p class="mt-[25px] text-[18px] font-light leading-[31px]">
+            In an area of 3.8 hectares are available areas of 80-100 square
+            meters, of course separated by shrubs and trees that offer thick
+            shade able to accommodate caravans
+          </p>
+        </div>
+        <div class="px-6 space-y-20 xl:space-y-[120px] py-20">
+          <div
+            class="flex flex-col justify-between space-y-10 xl:space-y-0 xl:flex-row"
+          >
+            <div class="w-full xl:w-[50%]">
+              <p class="text-[14px] text-main-gray-100 w-[80%]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                ea modi quam porro minus? Quis illo soluta ad autem obcaecati
+                cupiditate. Corrupti eos alias iste vero quidem aspernatur
+                cumque sapiente.
+              </p>
+              <div class="flex mt-8 text-[15px] text-main-gray-100">
+                <div class="w-full">
+                  <div class="flex w-full pb-3">
+                    <h6
+                      class="w-[80%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      lorem
+                    </h6>
+                    <h6
+                      class="w-[20%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      ipsum
+                    </h6>
+                  </div>
+                  <ul>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-y py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                href="/offer.html"
+                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+              >
+                Purchase
+              </a>
+            </div>
+            <img
+              src="/assets/images/default-prices.jpg"
+              alt="Offer Image"
+              class="w-full xl:w-[45%] object-cover"
+            />
+          </div>
+          <div
+            class="flex flex-col-reverse xl:justify-between xl:flex-row-reverse"
+          >
+            <div class="w-full xl:w-[50%]">
+              <p class="text-[14px] text-main-gray-100 w-[80%]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                ea modi quam porro minus? Quis illo soluta ad autem obcaecati
+                cupiditate. Corrupti eos alias iste vero quidem aspernatur
+                cumque sapiente.
+              </p>
+              <div class="flex mt-8 xl:pr-24 text-[15px] text-main-gray-100">
+                <div class="w-full">
+                  <div class="flex w-full pb-3">
+                    <h6
+                      class="w-[80%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      lorem
+                    </h6>
+                    <h6
+                      class="w-[20%] text-[13px] font-semibold uppercase pb-5"
+                    >
+                      ipsum
+                    </h6>
+                  </div>
+                  <ul>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-t py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                    <li class="border-y py-3 border-gray-400 flex">
+                      <p class="w-[80%]">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                      </p>
+                      <p class="w-[20%]">30000.00 UZS</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                href="/offer.html"
+                class="block w-fit px-6 py-[13px] mt-5 border border-main-green-100 hover:bg-main-green-100 hover:text-white duration-200"
+              >
+                Purchase
+              </a>
+            </div>
+            <img
+              src="/assets/images/default-prices.jpg"
+              alt="Offer Image"
+              class="w-full mb-10 xl:w-[45%] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <footer class="bg-main-green-200 text-white font-prompt text-white-200">
+        <div class="container mx-auto px-6 text-[15px]">
+          <div class="pt-[103px] pb-[84px] flex flex-wrap">
+            <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
+              <h5 class="mb-[15px] text-[20px] font-semibold text-white">
+                This is Kamperen
+              </h5>
+              <p class="my-1 font-light leading-[25.95px]">
+                Kamperen is equipped with everythig required for an amazing
+                campground business website. Set up camp now.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
+              <h5 class="mb-[15px] text-[20px] font-semibold text-white">
+                Links
+              </h5>
+              <ul class="space-y-[10px]">
+                <li>
+                  <a href="/" class="hover:text-white duration-200">Home</a>
+                </li>
+                <li>
+                  <a href="/about.html" class="hover:text-white duration-200"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="/contact.html" class="hover:text-white duration-200"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
+              <h5 class="mb-[15px] text-[20px] font-semibold text-white">
+                Contact
+              </h5>
+              <ul class="space-y-2">
+                <li>
+                  <span>A:</span>&nbsp;
+                  <a href="/" class="hover:text-white duration-200">
+                    Via Venti Settembre, Ireland
+                  </a>
+                </li>
+                <li>
+                  <span>P:</span>&nbsp;
+                  <a href="/" class="hover:text-white duration-200">
+                    +31 555 777 83
+                  </a>
+                </li>
+                <li>
+                  <span>A:</span>&nbsp;
+                  <a href="/" class="hover:text-white duration-200">
+                    kamperen@qode.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/5 mx-auto mb-[25px] px-[15px]">
+              <h5 class="mb-[15px] text-[20px] font-semibold text-white">
+                Get Social
+              </h5>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="/"
+                    class="flex items-center space-x-3 hover:text-white duration-200 tracking-wide"
+                  >
+                    <i class="fa-brands fa-facebook-f text-[18px]"></i>
+                    <p>Facebook</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    class="flex items-center space-x-3 hover:text-white duration-200 tracking-wide"
+                  >
+                    <i class="fa-brands fa-instagram text-[18px]"></i>
+                    <p>Instagram</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    class="flex items-center space-x-3 hover:text-white duration-200 tracking-wide"
+                  >
+                    <i class="fa-brands fa-telegram text-[18px]"></i>
+                    <p>Telegram</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="flex flex-col space-y-4 text-center py-5 md:flex-row md:space-y-0 justify-between border-t border-gray-600"
+          >
+            <div class="divide-x-2 divide-gray-600">
+              <a href="/" class="pr-2">Terms of Use</a>
+              <a href="/" class="pl-3">Privacy Policy</a>
+            </div>
+            <p>© 2021 Qode Interactive, All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

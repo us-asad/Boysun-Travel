@@ -1,0 +1,116 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.center-marker {
+  height: 50px;
+  width: 100vw;
+  position: absolute;
+  top: calc(50% - 360px);
+  display: none;
+}
+
+.center-marker div {
+  height: 30px;
+  width: 1px;
+  margin: auto;
+  background: #8882;
+}
+
+.js-slideshow {
+  --offset: 1600px;
+  --overlap: 2;
+  --image-gap: 6;
+  --offset-time: 0.48s;
+  --thumb-border-radius: 0;
+  --thumb-size: 50;
+  --thumbs-width: 20000;
+  width: calc(100vw - 0px);
+  max-width: 880px;
+  position: relative;
+
+  user-select: none;
+}
+
+.js-slideshow__slides-wrapper {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+}
+.js-slideshow__slides {
+  position: absolute;
+  height: 100%;
+  width: 40000px;
+  left: 50%;
+  transform: translate(calc(var(--offset) * -1), 0);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  transition: transform var(--offset-time) ease;
+}
+
+.js-slideshow__slides img {
+  height: 100%;
+  display: block;
+  margin-left: calc(var(--image-gap) * 0.5px);
+  margin-right: calc(var(--image-gap) * 0.5px);
+}
+.js-slideshow__thumbs-wrapper {
+  width: 100%;
+  height: calc(var(--thumb-size) * 1px + 18px);
+  margin-top: calc(var(--image-gap) * 1px);
+  position: relative;
+  display: block;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.js-slideshow__thumbs {
+  width: calc(var(--thumbs-width) * 1px);
+  display: grid;
+  grid-auto-rows: calc(var(--thumb-size) * 1px);
+  grid-template-columns: repeat(auto-fit, calc(var(--thumb-size) * 1px));
+  grid-gap: calc(var(--image-gap) * 1px);
+}
+.js-slideshow__thumb-image {
+  margin: 0;
+  position: relative;
+}
+
+.js-slideshow__thumb-image img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: var(--thumb-border-radius);
+  object-fit: cover;
+}
+
+.js-slideshow__thumb-image--selected:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--thumb-border-radius);
+  box-shadow: inset 0 0 0 3px rgba(50, 200, 200, 0.8);
+}
+
+@media (min-width: 700px) {
+  .js-slideshow {
+    --thumb-size: 77;
+  }
+
+  .js-slideshow__thumbs-wrapper {
+    display: block;
+  }
+}
