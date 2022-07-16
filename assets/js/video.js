@@ -1,3 +1,4 @@
+
 const handleAboutVideoPlay = () => {
   const playBtn = $("#play-about-video");
   const video = $("#about-video");

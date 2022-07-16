@@ -54,7 +54,6 @@ const handleLoadMoreData = () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   handleMainSlider();
-  handleAboutVideoPlay();
   handleLoadMoreData();
 });
 
