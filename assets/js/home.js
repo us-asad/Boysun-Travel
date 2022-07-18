@@ -15,13 +15,11 @@ const handleMainSlider = () => {
   prevBtn.addEventListener("click", () => {
     activeSlide -= 1;
     moveSlider();
-    console.log(activeSlide)
   });
 
   nextBtn.addEventListener("click", () => {
     activeSlide += 1;
     moveSlider();
-    console.log(activeSlide)
   });
 
   setInterval(() => {
