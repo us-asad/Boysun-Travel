@@ -53,13 +53,12 @@ const handleAuthModal = () => {
 }
 
 const handleLanguage = () => {
-  const l = localStorage.getItem("lang");
-  const lang = l ? JSON.parse(l) : null;
+  const lang = localStorage.getItem("lang");
   const changeLocaltionByLang = lang => {
     localStorage.setItem("lang", lang);
     window.location.pathname = `/${lang}`;
   }
-
+console.log(lang)
   if (window.location.pathname === "/") {
     window.location.pathname = `/${lang || "eng"}`;
   }
