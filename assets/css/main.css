@@ -66,4 +66,14 @@
   content: "▪ ";
 }
 
+.border-blue {
+  border-color: #4b7fe0 !important;
+}
+
+.hide-form {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
 

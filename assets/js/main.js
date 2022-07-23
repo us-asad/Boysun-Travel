@@ -58,7 +58,7 @@ const handleLanguage = () => {
     localStorage.setItem("lang", lang);
     window.location.pathname = `/${lang}`;
   }
-console.log(lang)
+
   if (window.location.pathname === "/") {
     window.location.pathname = `/${lang || "eng"}`;
   }
@@ -80,6 +80,39 @@ console.log(lang)
   }
 }
 
+const handleChangeForm = () => {
+  const registerBtn = $("#show-register-btn");
+  const loginBtn = $("#show-login-btn");
+  const registerForm = $("#register-form")
+  const loginForm = $("#login-form");
+  let showLoginForm = 1;
+
+  const changeAuthPage = () => {
+    if (showLoginForm) {
+      loginForm.classList.remove("hide-form");
+      registerForm.classList.add("hide-form");
+      registerBtn.classList.remove("border-blue");
+      loginBtn.classList.add("border-blue");
+    } else {
+      loginForm.classList.add("hide-form");
+      registerForm.classList.remove("hide-form");
+      registerBtn.classList.add("border-blue");
+      loginBtn.classList.remove("border-blue");
+    }
+  }
+
+  registerBtn.addEventListener("click", () => {
+    console.log("a")
+    showLoginForm = 0;
+    changeAuthPage();
+  });
+
+  loginBtn.addEventListener("click", () => {
+    showLoginForm = 1;
+    changeAuthPage();
+  })
+}
+
 const navbar = $("#navbar")
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
@@ -95,6 +128,7 @@ window.addEventListener("DOMContentLoaded", () => {
   handleNavbarOpenMenu();
   handleAuthModal();
   handleLanguage();
+  handleChangeForm();
 
   tailwind.config = {
     theme: {
