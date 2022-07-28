@@ -1,5 +1,6 @@
 const $ = el => document.querySelector(el);
 const $All = el => document.querySelectorAll(el);
+const usernameRegEx = /^[a-zA-Z\-]+$/;
 
 const handleNavbarOpenMenu = () => {
   const arrowsContainer = $("#navbar-arrows");
@@ -22,6 +23,84 @@ const handleNavbarOpenMenu = () => {
     }
   });
 
+}
+
+const handleResgisterValidation = () => {
+  const submit = $("#register-form");
+  const email = $("#register-email");
+  const pass = $("#register-password");
+  const passCon = $("#register-passwordConfirm");
+  const username = $("#register-username");
+  const name = $("#register-name");
+  const phone = $("#register-phone");
+  const error = $("#register-error");
+
+  const callError = err_text => {
+    error.innerText = err_text;
+  }
+
+  submit.addEventListener("submit", async e => {
+    e.preventDefault();
+    const emailRegEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const phoneRegEx = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+
+    const emailValResult = String(email.value)
+      .toLowerCase()
+      .match(emailRegEx);
+
+    const phoneValResult = String(phone.value)
+      .toLowerCase()
+      .match(phoneRegEx);
+
+    const usernameValResult = String(username.value)
+      .toLowerCase()
+      .match(usernameRegEx);
+
+    if (name.value.length < 5) return callError("Ism Familiya 5 tadan kam bo'lmasligi shart!");
+
+    if (!emailValResult) return callError("Iltimos to'g'ri elektron pochta kiriting!");
+
+    if (!phoneValResult) return callError("Iltimos to'g'ri telefon raqam kiriting!");
+
+    if (pass.value.length < 8 || passCon.value.lengh < 8) return callError("Parol kamida 8 ta belgidan iborat bo'lishi shart!");
+
+    if (pass.value !== passCon.value) return callError("Parollari bir xil bo'lishi shart!");
+
+    if (username.value.length < 3) return callError("Tahallus 3tadan kam bo'lmasligi shart!");
+
+    if (!usernameValResult) return callError("tahallus faqat katta kichik harflar va - belgisidan tashkil topishi mumkin!");
+
+    const res = await fetch("https://my-travel.uz/eng/user/getusers");
+    const users = await res.json();
+
+    for (let user of users) {
+      if (user.userName === username.value) return callError("Ushbu tahallus allaqachon ishlatilgan, Iltimos boshqa tahallus yozing!");
+
+      if (user.email === email.value) return callError("Ushbu Elektron pochta ishlatilgan, Iltimos boshqa elektron pochta yozing!");
+    }
+
+    callError("");
+
+    const body = {
+      fullName: name.value,
+      userName: username.value,
+      email: email.value,
+      phone: phone.value,
+      pass: pass.value,
+      passRepeat: passCon.value
+    }
+
+    const registerRes = await fetch("https://my-travel.uz/eng/user/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    });
+    const data = await registerRes.json();
+
+    window.location = data.url;
+  });
 }
 
 const handleAuthModal = () => {
@@ -102,7 +181,6 @@ const handleChangeForm = () => {
   }
 
   registerBtn.addEventListener("click", () => {
-    console.log("a")
     showLoginForm = 0;
     changeAuthPage();
   });
@@ -129,6 +207,7 @@ window.addEventListener("DOMContentLoaded", () => {
   handleAuthModal();
   handleLanguage();
   handleChangeForm();
+  handleResgisterValidation();
 
   tailwind.config = {
     theme: {

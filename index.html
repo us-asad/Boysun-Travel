@@ -232,13 +232,16 @@
               placeholder="Tahalusingiz"
               name="userName"
               class="w-full py-2 px-4 border-2"
+              id="login-username"
             />
             <input
               type="password"
               placeholder="Parolingiz"
               name="pass"
               class="w-full py-2 px-4 border-2"
+              id="login-password"
             />
+            <span id="login-error" class="text-red-700 mt-4 block text-[12px]"></span>
             <button
               class="px-4 py-2 bg-[#4b7fe0] hover:bg-[#5b87d8] duration-200 text-white block w-full rounded-sm"
             >
@@ -248,41 +251,49 @@
           <form id="register-form" class="hide-form duration-200 uppercase space-y-4 max-w-[80vw] w-[90vw] sm:max-w-[400px]">
             <input
               type="text"
+              id="register-name"
               placeholder="Ism Familiyaningiz"
               name="fullName"
               class="w-full py-2 px-4 border-2"
             />
             <input
               type="text"
+              id="register-username"
               placeholder="Tahalusingiz"
               name="userName"
               class="w-full py-2 px-4 border-2"
             />
             <input
               type="email"
+              id="register-email"
               placeholder="Elektron pochtangiz"
               name="email"
               class="w-full py-2 px-4 border-2"
             />
             <input
               type="tel"
-              placeholder="Telefon raqamingiz"
+              id="register-phone"
+              placeholder="Telefon raqamingiz, +12133213212"
               name="phone"
               class="w-full py-2 px-4 border-2"
             />
             <input
               type="password"
+              id="register-password"
               placeholder="Parolingiz"
               name="pass"
               class="w-full py-2 px-4 border-2"
             />
             <input
               type="password"
+              id="register-passwordConfirm"
               placeholder="Parolni qayta kiriting"
               name="passRepeat"
               class="w-full py-2 px-4 border-2"
             />
+            <span id="register-error" class="text-red-700 mt-4 block text-[12px]"></span>
             <button
+              id="register-submit"
               class="px-4 py-2 bg-[#4b7fe0] hover:bg-[#5b87d8] duration-200 text-white block w-full rounded-sm"
             >
               Ro'yxatdan o'tish

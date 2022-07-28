@@ -327,6 +327,124 @@
           </div>
         </div>
       </section>
+      <!-- ORDER FORM -->
+      <section class="my-10">
+        <div class="md:w-[600px] lg:w-[1000px] mx-auto px-8 py-10 shadow-xl bg-gray-100">
+          <h1 class="text-center mb-10 text-[30px]">Tezkor buyurtma berish</h1>
+          <div class="space-y-8">
+            <div class="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-10">
+              <div class="space-x-3 w-full justify-center lg:w-1/2 flex">
+                <div class="w-1/2">
+                  <input
+                    type="text"
+                    class="border p-3 w-full"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Eshmat"
+                  />
+                  <label
+                    for="firstName"
+                    class="text-[12px] mt-3 ml-1"
+                  >Ismingiz</label>
+                </div>
+                <div class="w-1/2">
+                  <input
+                    type="text"
+                    class="border p-3 w-full"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Toshmatov"
+                  />
+                  <label
+                    for="lastName"
+                    class="text-[12px] mt-3 ml-1"
+                  >Familiyangiz</label>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 flex flex-col">
+                <input
+                  type="date"
+                  class="w-full h-[50px] border-2 p-3"
+                  id="date"
+                  name="date"
+                />
+                <label
+                  for="date"
+                  class="text-[12px] mt-1 ml-1"
+                >Kelish sanasi</label>
+              </div>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-10">
+              <div class="w-full lg:w-1/2 flex flex-col">
+                <input
+                  type="email"
+                  class="w-full h-[50px] border-2 p-3"
+                  id="email"
+                  placeholder="Eshmat@shermatov.com"
+                  name="email"
+                />
+                <label
+                  for="email"
+                  class="text-[12px] mt-1 ml-1"
+                >Elektron Pochtangiz</label>
+              </div>
+              <div class="w-full lg:w-1/2 flex flex-col">
+                <input
+                  type="tel"
+                  class="w-full h-[50px] border-2 p-3"
+                  id="phone"
+                  placeholder="+1-696-938-9493"
+                  name="phone"
+                />
+                <label
+                  for="phone"
+                  class="text-[12px] mt-1 ml-1"
+                >Telefon Raqamingiz</label>
+              </div>
+            </div>
+            <div class="w-full flex flex-col">
+              <input
+                type="text"
+                class="w-full h-[50px] border-2 p-3"
+                id="date"
+                placeholder="Termiz City"
+                name="date"
+              />
+              <label
+                for="date"
+                class="text-[12px] mt-1 ml-1"
+              >City</label>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between space-y-8 lg:space-y-0 lg:space-x-10">
+              <div class="w-full lg:w-1/2 flex flex-col">
+                <input
+                  type="number"
+                  class="w-full h-[50px] border-2 p-3"
+                  id="guests"
+                  placeholder="12"
+                  name="guests"
+                />
+                <label
+                  for="guests"
+                  class="text-[12px] mt-1 ml-1"
+                >Mehmonxonalar Soni</label>
+              </div>
+              <div class="w-full lg:w-1/2 flex flex-col">
+                <select
+                  name="country"
+                  id="country"
+                  class="border-2 p-3"
+                >
+                  <option value="default" selected disabled>Mamlakatingizni tanlang</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <h4 id="total-price" class="my-5 text-[30px]">$500</h4>
+          <button class="p-3 bg-[#30c2c2] hover:bg-[#32a5a5] text-white duration-500">Payme Orqali To'lash</button>
+          <button class="p-3 bg-[#eaad00] hover:bg-[#a98215] text-white duration-500">Visa Orqali To'lash</button>
+        </div>
+      </section>
       <!-- FOOTER -->
       <footer class="bg-main-green-200 text-white font-prompt text-white-200">
         <div class="container mx-auto px-6 text-[15px]">
