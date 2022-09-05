@@ -138,10 +138,6 @@ const handleLanguage = () => {
     window.location.pathname = `/${lang}`;
   }
 
-  if (window.location.pathname === "/") {
-    window.location.pathname = `/${lang || "eng"}`;
-  }
-
   const LangToEngBtns = $All(".lang-to-eng");
   const LangToUzBtns = $All(".lang-to-uz");
   const LangToRuBtns = $All(".lang-to-ru");
